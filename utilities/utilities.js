@@ -14,3 +14,7 @@ function setInnerTextByIdandValue(id, value) {
   const setInnerTextValue = document.getElementById(id).innerText = value;
   return setInnerTextValue;
 }
+
+function handleToggle(id, status) {
+  document.getElementById(id).style.display = status;
+}
