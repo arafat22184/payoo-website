@@ -1,19 +1,19 @@
-// Cash Out
-document.getElementById('cashout-btn').addEventListener('click', function (event) {
+// Transfer Money
+document.getElementById('transfer-money-btn').addEventListener('click', function (event) {
   event.preventDefault();
 
-  const accountNumber = document.getElementById('cashout-account-number').value;
-  const amount = getInputValueByID('cashout-amount');
-  const pin = getInputValueByID('cashout-pin');
+  const accountNumber = document.getElementById('transfer-account-number').value;
+  const amount = getInputValueByID('tansfer-amount');
+  const pin = getInputValueByID('transfer-pin');
   const mainBalance = getInnerTextByID('main-balance');
-  const selectedBank = document.getElementById('cashOut-allbank').value;
+  const selectedBank = document.getElementById('transfer-allbank').value;
  
   if (selectedBank === 'Select a Bank') {
     alert('Please Select a Bank');
     return;
   }
   
-  if (accountNumber) {
+  if (accountNumber.length >= 11) {
     if (amount) {
       if (amount > 0) {
         if (amount < mainBalance) {
@@ -29,8 +29,8 @@ document.getElementById('cashout-btn').addEventListener('click', function (event
           <div class="flex items-center p-2 gap-6">
             <div><img src="assets/wallet1.png" alt=""></div>
             <div>
-              <p class="font-semibold">CashOut</p>
-              <p>$${amount} cashout to ${selectedBank} Account Number: ${accountNumber}</p>
+              <p class="font-semibold">Transfer Money</p>
+              <p>$${amount} transfer to ${selectedBank} Account Number: ${accountNumber}</p>
               <p> ${formatDate()} </p>
             </div>
           </div>
@@ -56,7 +56,7 @@ document.getElementById('cashout-btn').addEventListener('click', function (event
   }
 
   else {
-    alert("Please Enter Account Number")
+    alert("Please Enter Valid Account Number")
   }
 }
 );

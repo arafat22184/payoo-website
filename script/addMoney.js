@@ -1,16 +1,20 @@
 // Add Money
 document.getElementById('add-money').addEventListener('click', function (event) {
   event.preventDefault();
-  const accountNumber = getInputValueByID('account-number');
+  const accountNumber = document.getElementById('account-number').value;
   const amount = getInputValueByID('amount');
   const pin = getInputValueByID('pin');
   const mainBalance = getInnerTextByID('main-balance');
   const selectedBank = document.getElementById('allbank').value;
-  console.log(selectedBank);
+ 
+  if (selectedBank === 'Select a Bank') {
+    alert('Please Select a Bank');
+    return;
+  }
 
   if (amount) {
     if (amount > 0) {
-      if (accountNumber) {
+      if (accountNumber.length >= 11) {
         if (pin === 1234) {
           const sum = mainBalance + amount;
           document.getElementById('main-balance').innerText = sum;
@@ -25,7 +29,7 @@ document.getElementById('add-money').addEventListener('click', function (event) 
             <div><img src="assets/wallet1.png" alt=""></div>
             <div>
               <p class="font-semibold">Add money</p>
-              <p>${amount}Tk added From ${selectedBank} Account Number: ${accountNumber}</p>
+              <p>$${amount} added From ${selectedBank} Account Number: ${accountNumber}</p>
               <p> ${formatDate()} </p>
             </div>
           </div>

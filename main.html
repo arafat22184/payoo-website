@@ -110,7 +110,7 @@
                 <div class="card-body">
         
                   <legend>Select Bank</legend>
-                  <select class="select">
+                  <select id="cashOut-allbank" class="select">
                     <option disabled selected>Select a Bank</option>
                     <option value="Bkash">Bkash</option>
                     <option value="Nagad">Nagad</option>
@@ -147,7 +147,7 @@
                 <div class="card-body">
         
                   <legend>Select Bank</legend>
-                  <select class="select">
+                  <select id="transfer-allbank" class="select">
                     <option disabled selected>Select a Bank</option>
                     <option value="Bkash">Bkash</option>
                     <option value="Nagad">Nagad</option>
@@ -157,17 +157,17 @@
                   <fieldset class="fieldset">
         
                     <label class="fieldset-label">Account number</label>
-                    <input id="account-number" type="number" class="input" value="01301301302" placeholder="type your number"
+                    <input id="transfer-account-number" type="number" class="input" value="01301301302" placeholder="type your number"
                       required />
         
                     <label class="fieldset-label">Amount</label>
-                    <input id="amount" type="number" class="input" placeholder="type your Amount" required />
+                    <input id="tansfer-amount" type="number" class="input" placeholder="type your Amount" required />
         
                     <label class="fieldset-label">PIN</label>
-                    <input id="pin" type="text" class="input" value="1234" placeholder="type your PIN" required />
+                    <input id="transfer-pin" type="text" class="input" value="1234" placeholder="type your PIN" required />
         
                     <div><a class="link link-hover">Forgot PIN?</a></div>
-                    <button id="add-money" class="btn btn-neutral bg-blue-700 border-none mt-4">Send Now</button>
+                    <button id="transfer-money-btn" class="btn btn-neutral bg-blue-700 border-none mt-4">Send Now</button>
                   </fieldset>
                 </div>
               </div>
@@ -233,10 +233,10 @@
         </section>
 
         <!-- Transactions -->
-        <section id="transaction" class="mt-6 hidden space-y-3">
+        <section id="transaction" class="mt-6 hidden">
           <h2 class="text-center text-2xl text-blue-500 font-bold mb-5">Transaction History</h2>
 
-          <div id="transaction-container"></div>
+          <div id="transaction-container" class="space-y-3"></div>
         </section>
 
       </section>
@@ -244,10 +244,10 @@
   </section>
 
   <script src="utilities/utilities.js"></script>
+  <script src="script/toggle.js"></script>
   <script src="script/logout.js"></script>
   <script src="script/addMoney.js"></script>
-  <script src="script/toggle.js"></script>
   <script src="script/cashout.js"></script>
-  <script src="script/transection-history.js"></script>
+  <script src="script/transferMoney.js"></script>
 </body>
 </html>
