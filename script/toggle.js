@@ -1,4 +1,4 @@
-handleToggle('transfer-money', 'block');
+handleToggle('payBill', 'block');
 
 document.getElementById('add-money-box').addEventListener("click", function (event) {
   handleToggle('addmoney', 'block');

@@ -92,7 +92,7 @@
                     <label class="fieldset-label">PIN</label>
                     <input id="pin" type="text" class="input" value="1234" placeholder="type your PIN" required />
                     
-                    <div><a class="link link-hover">Forgot PIN?</a></div>
+                    
                     <button id="add-money" class="btn btn-neutral bg-blue-700 border-none mt-4">Add money</button>
                   </fieldset>
                 </div>
@@ -129,7 +129,7 @@
                     <label class="fieldset-label">PIN</label>
                     <input id="cashout-pin" type="text" class="input" value="1234" placeholder="type your PIN" required />
         
-                    <div><a class="link link-hover">Forgot PIN?</a></div>
+                    
                     <button id="cashout-btn" class="btn btn-neutral bg-blue-700 border-none mt-4">Withdraw Money</button>
                   </fieldset>
                 </div>
@@ -166,7 +166,7 @@
                     <label class="fieldset-label">PIN</label>
                     <input id="transfer-pin" type="text" class="input" value="1234" placeholder="type your PIN" required />
         
-                    <div><a class="link link-hover">Forgot PIN?</a></div>
+                    
                     <button id="transfer-money-btn" class="btn btn-neutral bg-blue-700 border-none mt-4">Send Now</button>
                   </fieldset>
                 </div>
@@ -184,10 +184,10 @@
                 <div class="card-body">
                   <fieldset class="fieldset">
         
-                    <label class="fieldset-label">Account number</label>
-                    <input id="account-number" type="text" class="input" placeholder="Enter your coupon"
+                    <label class="fieldset-label">Enter Bonus Coupon</label>
+                    <input id="getbonus-coupon" type="text" class="input" placeholder="Enter your coupon"
                       required />
-                    <button id="add-money" class="btn btn-neutral bg-blue-700 border-none mt-4">Get Bonus</button>
+                    <button id="getBonus-btn" class="btn btn-neutral bg-blue-700 border-none mt-4">Get Bonus</button>
                   </fieldset>
                 </div>
               </div>
@@ -204,27 +204,26 @@
                 <div class="card-body">
         
                   <legend>Select To Pay</legend>
-                  <select class="select">
-                    <option disabled selected>Select a Bank</option>
-                    <option value="Bkash">Bkash</option>
-                    <option value="Nagad">Nagad</option>
-                    <option value="DBBL">DBBL</option>
+                  <select id="select-Biller" class="select">
+                    <option disabled selected>Select Biller</option>
+                    <option value="Electricity Bill">Electricity Bill</option>
+                    <option value="Internet Bill">Internet Bill</option>
+                    <option value="Credit Card Bill">Credit Card Bill</option>
                   </select>
         
                   <fieldset class="fieldset">
         
-                    <label class="fieldset-label">Account number</label>
-                    <input id="account-number" type="number" class="input" value="01301301302" placeholder="type your number"
+                    <label class="fieldset-label">Biller Account Number</label>
+                    <input id="payBill-account-number" type="number" class="input" value="01301301302" placeholder="type your number"
                       required />
         
-                    <label class="fieldset-label">Amount</label>
-                    <input id="amount" type="number" class="input" placeholder="type your Amount" required />
+                    <label class="fieldset-label">Amount to Pay</label>
+                    <input id="payBill-amount" type="number" class="input" placeholder="type your Amount" required />
         
                     <label class="fieldset-label">PIN</label>
-                    <input id="pin" type="text" class="input" value="1234" placeholder="type your PIN" required />
-        
-                    <div><a class="link link-hover">Forgot PIN?</a></div>
-                    <button id="add-money" class="btn btn-neutral bg-blue-700 border-none mt-4">Pay Now</button>
+                    <input id="payBill-pin" type="text" class="input" value="1234" placeholder="type your PIN" required />
+
+                    <button id="pay-bill-btn" class="btn btn-neutral bg-blue-700 border-none mt-4">Pay Now</button>
                   </fieldset>
                 </div>
               </div>
@@ -249,5 +248,7 @@
   <script src="script/addMoney.js"></script>
   <script src="script/cashout.js"></script>
   <script src="script/transferMoney.js"></script>
+  <script src="script/getBonus.js"></script>
+  <script src="script/payBill.js"></script>
 </body>
 </html>
