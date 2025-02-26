@@ -21,7 +21,7 @@ document.getElementById('getBonus-btn').addEventListener('click', function (even
             <div><img src="assets/wallet1.png" alt=""></div>
             <div>
               <p class="font-semibold">Get Bonus</p>
-              <p>$1500 added From Coupon</p>
+              <p>1500$ added From Coupon</p>
             </div>
           </div>
           </div>

@@ -29,7 +29,7 @@ document.getElementById('pay-bill-btn').addEventListener('click', function (even
             <div><img src="assets/wallet1.png" alt=""></div>
             <div>
               <p class="font-semibold">Pay Bill</p>
-              <p>$${amount} Pay Bill to ${selectBiller} Account Number: ${accountNumber}</p>
+              <p>${amount}$ Pay Bill to ${selectBiller} Account Number: ${accountNumber}</p>
               <p> ${formatDate()} </p>
             </div>
           </div>

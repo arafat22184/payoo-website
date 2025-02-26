@@ -30,7 +30,7 @@ document.getElementById('transfer-money-btn').addEventListener('click', function
             <div><img src="assets/wallet1.png" alt=""></div>
             <div>
               <p class="font-semibold">Transfer Money</p>
-              <p>$${amount} transfer to ${selectedBank} Account Number: ${accountNumber}</p>
+              <p>${amount}$ transfer to ${selectedBank} Account Number: ${accountNumber}</p>
               <p> ${formatDate()} </p>
             </div>
           </div>

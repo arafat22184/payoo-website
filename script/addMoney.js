@@ -29,7 +29,7 @@ document.getElementById('add-money').addEventListener('click', function (event) 
             <div><img src="assets/wallet1.png" alt=""></div>
             <div>
               <p class="font-semibold">Add money</p>
-              <p>$${amount} added From ${selectedBank} Account Number: ${accountNumber}</p>
+              <p>${amount}$ added From ${selectedBank} Account Number: ${accountNumber}</p>
               <p> ${formatDate()} </p>
             </div>
           </div>

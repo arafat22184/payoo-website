@@ -5,10 +5,10 @@ document.getElementById("login-btn")
     const convertedAccountNumber = parseInt(accountNumber);
     const pin = document.getElementById('pin').value;
     const convertedPin = parseInt(pin);
-    console.log(typeof accountNumber);
-    if (convertedAccountNumber === 11111000134) {
 
-      if (convertedPin === 123456) {
+    if (convertedAccountNumber === 11020304050) {
+
+      if (convertedPin === 1234) {
         window.location.href = "./main.html"
       }
       else {

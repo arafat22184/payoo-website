@@ -30,7 +30,7 @@ document.getElementById('cashout-btn').addEventListener('click', function (event
             <div><img src="assets/wallet1.png" alt=""></div>
             <div>
               <p class="font-semibold">CashOut</p>
-              <p>$${amount} cashout to ${selectedBank} Account Number: ${accountNumber}</p>
+              <p>${amount}$ cashout to ${selectedBank} Account Number: ${accountNumber}</p>
               <p> ${formatDate()} </p>
             </div>
           </div>

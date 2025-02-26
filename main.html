@@ -12,12 +12,14 @@
   <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
     <header>
       <nav class="flex justify-around items-center">
-        <img class="w-16" src="assets/Group.png" alt="">
+        <div class="flex gap-4">
+          <img class="w-16" src="assets/Group.png" alt="">
         <div>
           <h1 class="text-3xl font-bold">$ <span id="main-balance">4500</span></h1>
-          <p class="border rounded p-1">available balance</p>
+          <p class="text-slate-500">available balance</p>
         </div>
-        <button id="logout-btn" class="btn">logout</button>
+      </div>
+        <button id="logout-btn" class="btn hover:bg-red-500 hover:text-white">logout</button>
       </nav>
       <section class="mt-10 p-2">
         <h1 class="text-2xl font-bold mb-2">Welcome to Payoo!</h1>
@@ -26,37 +28,37 @@
         <div class="cards grid grid-cols-3 mt-14 gap-2">
 
           <!-- Money Box -->
-          <div id="add-money-box" class="box border p-4 text-center rounded-sm cursor-pointer">
+          <div id="add-money-box" class="box border p-4 text-center rounded-sm cursor-pointer hover:bg-blue-200 hover:border-blue-700">
             <img class="w-8 mx-auto" src="assets/wallet1.png" alt="">
             <h3>Add Money</h3>
           </div>
 
           <!-- Cashout Box -->
-          <div id="cashout-box" class="cursor-pointer box border p-4 text-center rounded-sm">
+          <div id="cashout-box" class="cursor-pointer box border p-4 text-center rounded-sm hover:bg-blue-200 hover:border-blue-700">
             <img class="w-8 mx-auto" src="assets/send1.png" alt="">
             <h3>Cash Out</h3>
           </div>
 
           <!-- Transfer money Box -->
-          <div id="transfer-money-box" class="cursor-pointer box border p-4 text-center rounded-sm">
+          <div id="transfer-money-box" class="cursor-pointer box border p-4 text-center rounded-sm hover:bg-blue-200 hover:border-blue-700">
             <img class="w-8 mx-auto" src="assets/money1.png" alt="">
             <h3>Transfer Money</h3>
           </div>
 
           <!-- Get Bonus Box -->
-          <div id="get-bonus-box" class="cursor-pointer box border p-4 text-center rounded-sm">
+          <div id="get-bonus-box" class="cursor-pointer box border p-4 text-center rounded-sm hover:bg-blue-200 hover:border-blue-700">
             <img class="w-8 mx-auto" src="assets/bonus1.png" alt="">
             <h3>Get Bonus</h3>
           </div>
           
           <!-- Pay Bill Box -->
-          <div id="pay-bill-box" class="cursor-pointer box border p-4 text-center rounded-sm">
+          <div id="pay-bill-box" class="cursor-pointer box border p-4 text-center rounded-sm hover:bg-blue-200 hover:border-blue-700">
             <img class="w-8 mx-auto" src="assets/purse1.png" alt="">
             <h3>Pay Bill</h3>
           </div>
           
           <!-- Transactions Box -->
-          <div id="transactions-box" class="cursor-pointer box border p-4 text-center rounded-sm">
+          <div id="transactions-box" class="cursor-pointer box border p-4 text-center rounded-sm hover:bg-blue-200 hover:border-blue-700">
             <img class="w-8 mx-auto" src="assets/transaction1.png" alt="">
             <h3>Transactions</h3>
           </div>
@@ -73,8 +75,8 @@
               <div class="card w-full max-w-sm shrink-0 shadow-2xl">
                 <div class="card-body">
 
-                  <legend>Select Bank</legend>
-                  <select id="allbank" class="select">
+                  <legend>Select A Bank</legend>
+                  <select id="allbank" class="select rounded-2xl">
                     <option disabled selected>Select a Bank</option>
                     <option value="Bkash">Bkash</option>
                     <option value="Nagad">Nagad</option>
@@ -84,16 +86,16 @@
                   <fieldset class="fieldset">
 
                     <label class="fieldset-label">Account number</label>
-                    <input id="account-number" type="number" class="input" value="01301301302" placeholder="type your number" required />
+                    <input id="account-number" type="number" class="input rounded-2xl" placeholder="Enter 11 digit account number" required />
 
-                    <label class="fieldset-label">Amount</label>
-                    <input id="amount" type="number" class="input" placeholder="type your Amount" required />
+                    <label class="fieldset-label">Amount to Add</label>
+                    <input id="amount" type="number" class="input rounded-2xl" placeholder="Enter Amount to add" required />
 
-                    <label class="fieldset-label">PIN</label>
-                    <input id="pin" type="text" class="input" value="1234" placeholder="type your PIN" required />
+                    <label class="fieldset-label">Pin Number</label>
+                    <input id="pin" type="text" class="input rounded-2xl" placeholder="Enter 4 digit pin number" required />
                     
                     
-                    <button id="add-money" class="btn btn-neutral bg-blue-700 border-none mt-4">Add money</button>
+                    <button id="add-money" class="btn btn-neutral bg-blue-700 border-none mt-4 hover:bg-blue-500 rounded-2xl">Add money</button>
                   </fieldset>
                 </div>
               </div>
@@ -110,27 +112,27 @@
                 <div class="card-body">
         
                   <legend>Select Bank</legend>
-                  <select id="cashOut-allbank" class="select">
+                  <select id="cashOut-allbank" class="select rounded-2xl">
                     <option disabled selected>Select a Bank</option>
-                    <option value="Bkash">Bkash</option>
+                    <option value="ATM">Bkash</option>
                     <option value="Nagad">Nagad</option>
-                    <option value="DBBL">DBBL</option>
+                    <option value="Agent">DBBL</option>
                   </select>
         
                   <fieldset class="fieldset">
         
-                    <label class="fieldset-label">Account number</label>
-                    <input id="cashout-account-number" type="number" class="input" value="01301301302" placeholder="type your number"
+                    <label class="fieldset-label">User Account number</label>
+                    <input id="cashout-account-number" type="number" class="input rounded-2xl" placeholder="Enter 11 digit number"
                       required />
         
                     <label class="fieldset-label">Amount</label>
-                    <input id="cashout-amount" type="number" class="input" placeholder="type your Amount" required />
+                    <input id="cashout-amount" type="number" class="input rounded-2xl" placeholder="Enter amount to withdraw" required />
         
                     <label class="fieldset-label">PIN</label>
-                    <input id="cashout-pin" type="text" class="input" value="1234" placeholder="type your PIN" required />
+                    <input id="cashout-pin" type="text" class="input rounded-2xl" placeholder="Enter 4 digit pin number" required />
         
                     
-                    <button id="cashout-btn" class="btn btn-neutral bg-blue-700 border-none mt-4">Withdraw Money</button>
+                    <button id="cashout-btn" class="btn btn-neutral bg-blue-700 border-none mt-4 hover:bg-blue-500 rounded-2xl">Withdraw Money</button>
                   </fieldset>
                 </div>
               </div>
@@ -147,7 +149,7 @@
                 <div class="card-body">
         
                   <legend>Select Bank</legend>
-                  <select id="transfer-allbank" class="select">
+                  <select id="transfer-allbank" class="select rounded-2xl">
                     <option disabled selected>Select a Bank</option>
                     <option value="Bkash">Bkash</option>
                     <option value="Nagad">Nagad</option>
@@ -156,18 +158,18 @@
         
                   <fieldset class="fieldset">
         
-                    <label class="fieldset-label">Account number</label>
-                    <input id="transfer-account-number" type="number" class="input" value="01301301302" placeholder="type your number"
+                    <label class="fieldset-label">User Account number</label>
+                    <input id="transfer-account-number" type="number" class="input rounded-2xl" placeholder="Enter 11 digit number"
                       required />
         
                     <label class="fieldset-label">Amount</label>
-                    <input id="tansfer-amount" type="number" class="input" placeholder="type your Amount" required />
+                    <input id="tansfer-amount" type="number" class="input rounded-2xl" placeholder="Enter amount to transfer" required />
         
                     <label class="fieldset-label">PIN</label>
-                    <input id="transfer-pin" type="text" class="input" value="1234" placeholder="type your PIN" required />
+                    <input id="transfer-pin" type="text" class="input rounded-2xl" placeholder="Enter 4 digit pin number" required />
         
                     
-                    <button id="transfer-money-btn" class="btn btn-neutral bg-blue-700 border-none mt-4">Send Now</button>
+                    <button id="transfer-money-btn" class="btn btn-neutral bg-blue-700 border-none mt-4 hover:bg-blue-500 rounded-2xl">Send Now</button>
                   </fieldset>
                 </div>
               </div>
@@ -185,9 +187,9 @@
                   <fieldset class="fieldset">
         
                     <label class="fieldset-label">Enter Bonus Coupon</label>
-                    <input id="getbonus-coupon" type="text" class="input" placeholder="Enter your coupon"
+                    <input id="getbonus-coupon" type="text" class="input rounded-2xl" placeholder="Enter your coupon"
                       required />
-                    <button id="getBonus-btn" class="btn btn-neutral bg-blue-700 border-none mt-4">Get Bonus</button>
+                    <button id="getBonus-btn" class="btn btn-neutral bg-blue-700 border-none mt-4 hover:bg-blue-500 rounded-2xl">Get Bonus</button>
                   </fieldset>
                 </div>
               </div>
@@ -204,7 +206,7 @@
                 <div class="card-body">
         
                   <legend>Select To Pay</legend>
-                  <select id="select-Biller" class="select">
+                  <select id="select-Biller" class="select rounded-2xl">
                     <option disabled selected>Select Biller</option>
                     <option value="Electricity Bill">Electricity Bill</option>
                     <option value="Internet Bill">Internet Bill</option>
@@ -214,16 +216,16 @@
                   <fieldset class="fieldset">
         
                     <label class="fieldset-label">Biller Account Number</label>
-                    <input id="payBill-account-number" type="number" class="input" value="01301301302" placeholder="type your number"
+                    <input id="payBill-account-number" type="number" class="input rounded-2xl" placeholder="Enter account number"
                       required />
         
                     <label class="fieldset-label">Amount to Pay</label>
-                    <input id="payBill-amount" type="number" class="input" placeholder="type your Amount" required />
+                    <input id="payBill-amount" type="number" class="input rounded-2xl" placeholder="Enter amount to pay" required />
         
                     <label class="fieldset-label">PIN</label>
-                    <input id="payBill-pin" type="text" class="input" value="1234" placeholder="type your PIN" required />
+                    <input id="payBill-pin" type="text" class="input rounded-2xl" placeholder="Enter 4 digit pin number" required />
 
-                    <button id="pay-bill-btn" class="btn btn-neutral bg-blue-700 border-none mt-4">Pay Now</button>
+                    <button id="pay-bill-btn" class="btn btn-neutral bg-blue-700 border-none mt-4 hover:bg-blue-500 rounded-2xl">Pay Now</button>
                   </fieldset>
                 </div>
               </div>
