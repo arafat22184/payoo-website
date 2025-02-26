@@ -2,21 +2,17 @@
 document.getElementById('cashout-btn').addEventListener('click', function (event) {
   event.preventDefault();
 
-  const accountNumber = document.getElementById('cashout-account-number').value;
+  const accountNumber = getInputValueByID('cashout-account-number');
+  const amount = getInputValueByID('cashout-amount');
+  const pin = getInputValueByID('cashout-pin');
+  const mainBalance = getInnerTextByID('main-balance');
 
-  const amount = document.getElementById('cashout-amount').value;
-  
-  const convertedAmount = parseFloat(amount);
-  const pin = document.getElementById('cashout-pin').value;
-  const convertedPin = parseInt(pin);
-  const mainBalance = document.getElementById('main-balance').innerText;
-  const convertedMainBalance = parseFloat(mainBalance);
   
   if (accountNumber) {
     if (amount) {
-    if (convertedPin === 1234) {
-      const sum = convertedMainBalance - convertedAmount;
-      document.getElementById('main-balance').innerText = sum;
+    if (pin === 1234) {
+      const sum = mainBalance - amount;
+      setInnerTextByIdandValue('main-balance', sum)
     }
     else {
       alert("Wrong Pin");
