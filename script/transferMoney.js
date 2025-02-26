@@ -19,7 +19,9 @@ document.getElementById('transfer-money-btn').addEventListener('click', function
         if (amount < mainBalance) {
         if (pin === 1234) {
       const sum = mainBalance - amount;
-          setInnerTextByIdandValue('main-balance', sum)
+          setInnerTextByIdandValue('main-balance', sum);
+
+          alert(`succesfully transfer ${amount}$ to ${selectedBank}`)
           
           const container = document.getElementById('transaction-container');
 

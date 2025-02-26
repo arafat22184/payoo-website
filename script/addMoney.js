@@ -20,6 +20,8 @@ document.getElementById('add-money').addEventListener('click', function (event) 
           document.getElementById('main-balance').innerText = sum;
           setInnerTextByIdandValue('main-balance', sum);
 
+          alert(`succesfully added ${amount}$ to your Account`)
+
           const container = document.getElementById('transaction-container');
 
           const div = document.createElement('div');

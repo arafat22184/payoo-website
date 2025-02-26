@@ -2,15 +2,15 @@
 document.getElementById('getBonus-btn').addEventListener('click', function (event) {
   event.preventDefault();
   const getBonusCoupon = document.getElementById('getbonus-coupon').value;
-  console.log(getBonusCoupon);
   const coupon = 'arafat10';
   const mainBalance = getInnerTextByID('main-balance');
-  console.log(getBonusCoupon === coupon);
 
   if(getBonusCoupon === coupon){
     const sum = mainBalance + 1500;
           document.getElementById('main-balance').innerText = sum;
-          setInnerTextByIdandValue('main-balance', sum);  
+    setInnerTextByIdandValue('main-balance', sum);
+    
+    alert(`Congrats you get 1500$ bonus$`);
 
           const container = document.getElementById('transaction-container');
 

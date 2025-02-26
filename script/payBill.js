@@ -19,6 +19,8 @@ document.getElementById('pay-bill-btn').addEventListener('click', function (even
         if (pin === 1234) {
       const sum = mainBalance - amount;
           setInnerTextByIdandValue('main-balance', sum)
+
+          alert(`succesfully paid bill ${amount}$ to ${selectBiller}`);
           
           const container = document.getElementById('transaction-container');
 
