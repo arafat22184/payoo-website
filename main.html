@@ -74,7 +74,7 @@
                 <div class="card-body">
 
                   <legend>Select Bank</legend>
-                  <select class="select">
+                  <select id="allbank" class="select">
                     <option disabled selected>Select a Bank</option>
                     <option value="Bkash">Bkash</option>
                     <option value="Nagad">Nagad</option>
@@ -236,46 +236,7 @@
         <section id="transaction" class="mt-6 hidden space-y-3">
           <h2 class="text-center text-2xl text-blue-500 font-bold mb-5">Transaction History</h2>
 
-        <div class="bg-base-100 border border-base-300 rounded-md">
-          <div class="flex items-center p-2 gap-4">
-            <div><img src="assets/wallet1.png" alt=""></div>
-            <div>
-              <p class="font-semibold">Electricity Bill</p>
-              <p>Today 1:44 PM</p>
-            </div>
-          </div>
-          </div>
-
-        <div tabindex="0" class="bg-base-100 border border-base-300 rounded-md">
-          <div class="flex items-center p-2 gap-4">
-            <div><img src="assets/wallet1.png" alt=""></div>
-            <div>
-              <p class="font-semibold">Bank Deposite</p>
-              <p>Today 7:44 PM</p>
-            </div>
-          </div>
-        </div>
-
-        <div tabindex="0" class="bg-base-100 border border-base-300 rounded-md">
-          <div class="flex items-center p-2 gap-4">
-            <div><img src="assets/wallet1.png" alt=""></div>
-            <div>
-              <p class="font-semibold">Mobile Recharge</p>
-              <p>Today 2:44 PM</p>
-            </div>
-          </div>
-        </div>
-
-        <div tabindex="0" class="bg-base-100 border border-base-300 rounded-md">
-          <div class="flex items-center p-2 gap-4">
-            <div><img src="assets/wallet1.png" alt=""></div>
-            <div>
-              <p class="font-semibold">Gas Bill</p>
-              <p>Today 1:59 PM</p>
-            </div>
-          </div>
-          
-        </div>
+          <div id="transaction-container"></div>
         </section>
 
       </section>
@@ -283,9 +244,10 @@
   </section>
 
   <script src="utilities/utilities.js"></script>
+  <script src="script/logout.js"></script>
   <script src="script/addMoney.js"></script>
   <script src="script/toggle.js"></script>
   <script src="script/cashout.js"></script>
-  <script src="script/logout.js"></script>
+  <script src="script/transection-history.js"></script>
 </body>
 </html>

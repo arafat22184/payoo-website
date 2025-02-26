@@ -18,3 +18,10 @@ function setInnerTextByIdandValue(id, value) {
 function handleToggle(id, status) {
   document.getElementById(id).style.display = status;
 }
+
+function formatDate() {
+    const now = new Date();
+    const options = { hour: 'numeric', minute: 'numeric', hour12: true };
+    const timeString = now.toLocaleTimeString('en-US', options);
+    return `Today ${timeString}`;
+}
